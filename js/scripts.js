@@ -27,17 +27,29 @@ Player.prototype.remove = function(turnScore) {
 $(document).ready(function(){
   var playerOne = new Player(0, 0);
   var playerTwo = new Player(0, 0);
+  $("#play").click(function(event){
+    $("#playerOneButtons").show();
+  });
   $("#rollOne").click(function(event){
     var roll = getRandomIntInclusive(1,6);
     console.log(roll);
     if(roll === 1) {
-      playerOne.remove(playerOne.turnScore)
+      playerOne.remove(playerOne.turnScore);
+      $("#playerOneButtons").hide();
+      $("#playerTwoButtons").show();
     } else {
       playerOne.add(roll);
     }
   });
   $("#holdOne").click(function(event){
     playerOne.hold(playerOne.turnScore);
+    if(playerOne.score >= 100) {
+      // player one wins the game!
+    } else {
+      $("#playerOneButtons").hide();
+      $("#playerTwoButtons").show();
+      playerOne.remove(playerOne.turnScore);
+    }
     console.log(playerOne.score);
   });
 });
