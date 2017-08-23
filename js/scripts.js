@@ -30,6 +30,8 @@ $(document).ready(function(){
   var playerTwo = new Player(0, 0);
   $("#play").click(function(event){
     $("#playerOneButtons").show();
+    $("#play").hide();
+    $("#reset").show();
   });
 // PLAYER ONE AREA
   $("#rollOne").click(function(event){
@@ -50,7 +52,7 @@ $(document).ready(function(){
     playerOne.hold(playerOne.turnScore);
     $("#playerOneScore").text(playerOne.score);
     if(playerOne.score >= 100) {
-      alert("Player One winner winner chicken dinner!");
+      alert("<h2> Player One winner winner chicken dinner!</h2>");
     } else {
       $("#playerOneButtons").hide();
       $("#playerTwoButtons").show();
@@ -85,4 +87,5 @@ $(document).ready(function(){
     }
     console.log(playerTwo.score);
   });
+  
 });

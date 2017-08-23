@@ -10,3 +10,9 @@
 #playerTwoButtons {
   display: none;
 }
+#reset {
+  display: none;
+}
+a {
+  color: black;
+}
