@@ -1,18 +1,57 @@
 #playerOne {
   background-color: #fc9d9a;
+  max-height: 600px;
+  padding-bottom: 200px;
+  display: table;
+  text-align: center;
+  border-radius: 10px;
+
 }
+
 #playerTwo {
   background-color: #fc9d9a;
+  text-align: center;
+  padding-bottom: 200px;
+  border-radius: 10px;
 }
 #playerOneButtons {
   display: none;
+  position: absolute;
+  left: 50%;
+  margin-left: -56px;
+  bottom: 10px;
+
+
 }
 #playerTwoButtons {
   display: none;
+  position: absolute;
+  left: 50%;
+  margin-left: -56px;
+  bottom: 10px;
 }
 #reset {
   display: none;
+  position: absolute;
+  left: 50%;
+  margin-left: -56px;
+  bottom: 5px;
+}
+#score {
+  text-align: center;
+  padding-bottom: 600px;
+  max-height: 600px;
+}
+#play{
+  position: absolute;
+  left: 50%;
+  margin-left: -56px;
+  bottom: 5px;
 }
 a {
   color: black;
+}
+
+.jumbotron{
+text-align: center;
 }

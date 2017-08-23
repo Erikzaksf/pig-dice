@@ -52,7 +52,7 @@ $(document).ready(function(){
     playerOne.hold(playerOne.turnScore);
     $("#playerOneScore").text(playerOne.score);
     if(playerOne.score >= 100) {
-      alert("<h2> Player One winner winner chicken dinner!</h2>");
+      alert("Player One winner winner chicken dinner!");
     } else {
       $("#playerOneButtons").hide();
       $("#playerTwoButtons").show();
@@ -87,5 +87,5 @@ $(document).ready(function(){
     }
     console.log(playerTwo.score);
   });
-  
+
 });
