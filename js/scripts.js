@@ -18,6 +18,10 @@ Player.prototype.hold = function(turnScore){
   this.score += this.turnScore;
 }
 
+Player.prototype.remove = function(turnScore) {
+  this.turnScore = 0;
+}
+
 
 // Interface Logic
 $(document).ready(function(){
@@ -25,8 +29,12 @@ $(document).ready(function(){
   var playerTwo = new Player(0, 0);
   $("#rollOne").click(function(event){
     var roll = getRandomIntInclusive(1,6);
-    playerOne.add(roll);
     console.log(roll);
+    if(roll === 1) {
+      playerOne.remove(playerOne.turnScore)
+    } else {
+      playerOne.add(roll);
+    }
   });
   $("#holdOne").click(function(event){
     playerOne.hold(playerOne.turnScore);
