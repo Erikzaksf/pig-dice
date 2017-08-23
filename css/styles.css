@@ -4,3 +4,9 @@
 #playerTwo {
   background-color: #fc9d9a;
 }
+#playerOneButtons {
+  display: none;
+}
+#playerTwoButtons {
+  display: none;
+}
