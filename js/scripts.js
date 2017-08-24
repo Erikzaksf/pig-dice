@@ -51,7 +51,11 @@ $(document).ready(function(){
           $("#playerTwoRolls").append("<li>" + roll + "</li><br>");
         }
         playerTwo.hold(playerTwo.turnScore);
-        $("#playerTwoScore").text(playerTwo.score);
+        if (playerTwo.score >= 100) {
+          alert("Player Two winner winner chicken dinner!");
+        }else{
+          $("#playerTwoScore").text(playerTwo.score);
+        }
         playerTwo.remove(playerTwo.turnScore);
       }
     } else {
